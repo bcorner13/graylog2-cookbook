@@ -157,6 +157,19 @@ recipe like this:
 
 Include `recipe[graylog2::api_access]` to your run list.
 
+#### Install gems behind proxy
+If your installation of Graylog is behind a proxy. You will need to tell the Gem installer about the proxy settings. In
+order to accomplish this set the following attribute:
+```ruby
+'graylog2'=> {
+  'ruby' => {
+    'proxy' => 'http://192.168.100.123:3128'
+  }
+}
+```
+
+#### Examples
+
 ```ruby
 graylog2_inputs "syslog udp" do
   input '{ "title": "syslog", "type":"org.graylog2.inputs.syslog.udp.SyslogUDPInput", "global": true, "configuration": { "port": 1514, "allow_override_date": true, "bind_address": "0.0.0.0", "store_full_message": true, "recv_buffer_size": 1048576 } }'
