@@ -1,6 +1,63 @@
 Graylog Chef Cookbook Changes
 ==============================
 
+## 2.1.4
+
+* Bump to Graylog 2.1.1
+
+## 2.1.3
+
+* Allow to configure alternative repository
+* Update attributes
+
+## 2.1.2
+
+* Fix repository update on Debian/Ubuntu systems
+
+## 2.1.1
+
+* Bump to GL 2.1.0
+* Add web_endpoint_uri
+* Fix tests
+
+## 2.1.0
+
+* Replace collector recipe with collector_sidecar
+* Update log4j configuration
+* Test against Centos 7 and Dedian 8
+
+## 2.0.5
+
+* Fix collector installation
+
+## 2.0.4
+
+* Remove unused ES property elasticsearch_discovery_zen_ping_multicast_enabled
+* Server log file pattern changed to keep the correct number of rotated files
+
+## 2.0.3
+
+* Bump to Graylog 2.0.3
+* cluster master is now explicitly configurable
+* Fixed server start after reboot on Ubuntu systems
+
+## 2.0.2
+
+* Bump to Graylog 2.0.1
+
+## 2.0.1
+
+* Extend tests suite
+
+## 2.0.0
+
+* Major update, please read the Graylog upgrade guide before applying this version
+  http://docs.graylog.org/en/2.0/pages/upgrade.html
+* The web interface cookbook was removed due to architectual changes in Graylog
+* The collector is now deprecated and will be replaced by the Graylog Sidecar in the future
+  https://github.com/Graylog2/collector-sidecar
+* Added unit tests
+
 ## 1.2.2
 
 * Fix collector standalone mode
