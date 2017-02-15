@@ -31,6 +31,7 @@ default.graylog2[:collector][:group]  = 'graylog-collector'
 default.graylog2[:inputs] = nil
 default.graylog2[:streams] = nil
 default.graylog2[:dashboards] = nil
+default.graylog2[:ruby][:proxy] = nil
 
 # SHAs
 default.graylog2[:password_secret]              = nil # pwgen -s 96 1
